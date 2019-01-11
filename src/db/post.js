@@ -5,6 +5,8 @@ module.exports = {
     let query = db('posts as p');
 
     if (id) {
+      console.log('inside post db: id = ' + id);
+      /*
       query
         .join('users as u', 'p.userId', 'u.id')
         .select('p.text', 'u.name as postedBy')
@@ -18,7 +20,8 @@ module.exports = {
         post.tags = tags.map(t => t.tag);
 
         return post;
-      });
+      });*/
+      query.where('id', Number(id)).first();
     }
 
     return query;
@@ -30,6 +33,7 @@ module.exports = {
       .where('pt.postId', postId);
   },
   insert: function(post) {
+    console.log(post);
     return db('posts')
       .insert(post)
       .then(ids => ({ id: ids[0] }));
