@@ -1,0 +1,22 @@
+{
+  "name": "node-express",
+  "version": "0.0.1",
+  "description": "LambdaSchool Node.js and Express",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "all": "^0.0.0",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "require": "^2.4.20",
+    "require-all": "^3.0.0",
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
